@@ -17,6 +17,7 @@ spec:
       containers:
         - name: restaurent-website
           image: restaurent-website:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
           resources:
