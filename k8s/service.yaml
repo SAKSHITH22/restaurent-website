@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: restaurent-website
+  labels:
+    app: restaurent-website
+    environment: production
+spec:
+  type: ClusterIP
+  selector:
+    app: restaurent-website
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
